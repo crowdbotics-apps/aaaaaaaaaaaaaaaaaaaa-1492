@@ -38,6 +38,13 @@ class R1(models.Model):
     f1 = models.DateField()
     f2 = models.DateTimeField(auto_now=True,)
     f3 = models.TimeField(auto_now_add=True,)
+    f4 = models.OneToOneField(
+        "home.HomePage",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="r1_f4",
+    )
 
 
 class R5(models.Model):
