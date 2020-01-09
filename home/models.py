@@ -82,6 +82,7 @@ class R6(models.Model):
         on_delete=models.CASCADE,
         related_name="r6_f5",
     )
+    f6 = models.BigIntegerField(null=True, blank=True,)
 
 
 class R56(models.Model):
