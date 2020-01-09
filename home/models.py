@@ -45,3 +45,4 @@ class R5(models.Model):
     f1 = models.BigIntegerField()
     f2 = models.BigIntegerField()
     f3 = models.CharField(max_length=256,)
+    f4 = models.BigIntegerField(null=True, blank=True,)
