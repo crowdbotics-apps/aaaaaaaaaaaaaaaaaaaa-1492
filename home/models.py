@@ -81,3 +81,8 @@ class R6(models.Model):
         blank=True,
         related_name="r6_f5",
     )
+
+
+class R56(models.Model):
+    "Generated Model"
+    f1 = models.ForeignKey("home.R1", on_delete=models.CASCADE, related_name="r56_f1",)
