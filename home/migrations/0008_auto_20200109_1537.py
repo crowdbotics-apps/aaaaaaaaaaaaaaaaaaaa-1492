@@ -9,18 +9,30 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('home', '0007_r1_f4'),
+        ("home", "0007_r1_f4"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='r6',
-            name='f4',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='r6_f4', to='home.R1'),
+            model_name="r6",
+            name="f4",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="r6_f4",
+                to="home.R1",
+            ),
         ),
         migrations.AddField(
-            model_name='r6',
-            name='f5',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='r6_f5', to=settings.AUTH_USER_MODEL),
+            model_name="r6",
+            name="f5",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="r6_f5",
+                to=settings.AUTH_USER_MODEL,
+            ),
         ),
     ]

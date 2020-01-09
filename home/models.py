@@ -53,6 +53,13 @@ class R5(models.Model):
     f2 = models.BigIntegerField()
     f3 = models.CharField(max_length=256,)
     f4 = models.BigIntegerField(null=True, blank=True,)
+    f5 = models.ForeignKey(
+        "home.CustomText",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="r5_f5",
+    )
 
 
 class R6(models.Model):
