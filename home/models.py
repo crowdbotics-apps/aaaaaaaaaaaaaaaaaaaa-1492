@@ -23,6 +23,7 @@ class CustomText(models.Model):
 
 class HomePage(models.Model):
     body = models.TextField()
+    f2 = models.BigIntegerField(null=True, blank=True,)
 
     @property
     def api(self):
@@ -40,9 +41,9 @@ class R1(models.Model):
     f3 = models.TimeField(auto_now_add=True,)
     f4 = models.OneToOneField(
         "home.HomePage",
-        on_delete=models.CASCADE,
         null=True,
         blank=True,
+        on_delete=models.CASCADE,
         related_name="r1_f4",
     )
 
@@ -55,9 +56,9 @@ class R5(models.Model):
     f4 = models.BigIntegerField(null=True, blank=True,)
     f5 = models.ForeignKey(
         "home.CustomText",
-        on_delete=models.CASCADE,
         null=True,
         blank=True,
+        on_delete=models.CASCADE,
         related_name="r5_f5",
     )
 
@@ -69,16 +70,16 @@ class R6(models.Model):
     f3 = models.DateTimeField(auto_now_add=True,)
     f4 = models.ForeignKey(
         "home.R1",
-        on_delete=models.CASCADE,
         null=True,
         blank=True,
+        on_delete=models.CASCADE,
         related_name="r6_f4",
     )
     f5 = models.ForeignKey(
         "users.User",
-        on_delete=models.CASCADE,
         null=True,
         blank=True,
+        on_delete=models.CASCADE,
         related_name="r6_f5",
     )
 

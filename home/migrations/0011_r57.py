@@ -7,15 +7,30 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('home', '0010_r56'),
+        ("home", "0010_r56"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='R57',
+            name="R57",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('f1', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='r57_f1', to='home.CustomText')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "f1",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="r57_f1",
+                        to="home.CustomText",
+                    ),
+                ),
             ],
         ),
     ]
