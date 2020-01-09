@@ -38,3 +38,10 @@ class R1(models.Model):
     f1 = models.DateField()
     f2 = models.DateTimeField(auto_now=True,)
     f3 = models.TimeField(auto_now_add=True,)
+
+
+class R5(models.Model):
+    "Generated Model"
+    f1 = models.BigIntegerField()
+    f2 = models.BigIntegerField()
+    f3 = models.CharField(max_length=256,)
