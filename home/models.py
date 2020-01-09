@@ -60,3 +60,17 @@ class R6(models.Model):
     f1 = models.DateField()
     f2 = models.TimeField(auto_now=True,)
     f3 = models.DateTimeField(auto_now_add=True,)
+    f4 = models.ForeignKey(
+        "home.R1",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="r6_f4",
+    )
+    f5 = models.ForeignKey(
+        "users.User",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="r6_f5",
+    )
