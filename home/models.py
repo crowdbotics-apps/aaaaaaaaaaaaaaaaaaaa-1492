@@ -46,3 +46,10 @@ class R5(models.Model):
     f2 = models.BigIntegerField()
     f3 = models.CharField(max_length=256,)
     f4 = models.BigIntegerField(null=True, blank=True,)
+
+
+class R6(models.Model):
+    "Generated Model"
+    f1 = models.DateField()
+    f2 = models.TimeField(auto_now=True,)
+    f3 = models.DateTimeField(auto_now_add=True,)

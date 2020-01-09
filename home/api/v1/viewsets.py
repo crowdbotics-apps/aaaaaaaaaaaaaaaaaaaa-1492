@@ -5,6 +5,7 @@ from .serializers import (
     HomePageSerializer,
     R1Serializer,
     R5Serializer,
+    R6Serializer,
 )
 import json
 
@@ -27,7 +28,7 @@ from home.api.v1.serializers import (
     HomePageSerializer,
     UserSerializer,
 )
-from home.models import CustomText, HomePage, R1, R5
+from home.models import CustomText, HomePage, R1, R5, R6
 
 
 class SignupViewSet(ModelViewSet):
@@ -112,3 +113,12 @@ class R5ViewSet(viewsets.ModelViewSet):
         authentication.TokenAuthentication,
     )
     queryset = R5.objects.all()
+
+
+class R6ViewSet(viewsets.ModelViewSet):
+    serializer_class = R6Serializer
+    authentication_classes = (
+        authentication.SessionAuthentication,
+        authentication.TokenAuthentication,
+    )
+    queryset = R6.objects.all()
