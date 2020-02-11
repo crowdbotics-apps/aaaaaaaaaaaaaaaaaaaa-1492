@@ -100,3 +100,10 @@ class R57(models.Model):
 class XXX1(models.Model):
     "Generated Model"
     r1 = models.BigIntegerField()
+    r111 = models.OneToOneField(
+        "home.CustomText",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="xxx1_r111",
+    )
