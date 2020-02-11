@@ -8,6 +8,7 @@ from .viewsets import (
     R56ViewSet,
     R57ViewSet,
     R6ViewSet,
+    XXX1ViewSet,
 )
 
 from home.api.v1.viewsets import (
@@ -28,6 +29,7 @@ router.register("r5", R5ViewSet)
 router.register("r6", R6ViewSet)
 router.register("r56", R56ViewSet)
 router.register("r57", R57ViewSet)
+router.register("xxx1", XXX1ViewSet)
 
 urlpatterns = [
     path("", include(router.urls)),

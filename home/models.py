@@ -95,3 +95,8 @@ class R57(models.Model):
     f1 = models.ForeignKey(
         "home.CustomText", on_delete=models.CASCADE, related_name="r57_f1",
     )
+
+
+class XXX1(models.Model):
+    "Generated Model"
+    r1 = models.BigIntegerField()

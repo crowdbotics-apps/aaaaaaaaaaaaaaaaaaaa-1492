@@ -9,9 +9,9 @@ class User(AbstractUser):
     name = models.CharField(null=True, blank=True, max_length=255,)
     f1 = models.ForeignKey(
         "home.HomePage",
-        on_delete=models.CASCADE,
         null=True,
         blank=True,
+        on_delete=models.CASCADE,
         related_name="user_f1",
     )
 
