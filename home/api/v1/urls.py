@@ -2,6 +2,7 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from .viewsets import (
     CustomTextViewSet,
+    FDRFViewSet,
     HomePageViewSet,
     R1ViewSet,
     R5ViewSet,
@@ -30,6 +31,7 @@ router.register("r6", R6ViewSet)
 router.register("r56", R56ViewSet)
 router.register("r57", R57ViewSet)
 router.register("xxx1", XXX1ViewSet)
+router.register("fdrf", FDRFViewSet)
 
 urlpatterns = [
     path("", include(router.urls)),

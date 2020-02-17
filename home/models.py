@@ -102,8 +102,13 @@ class XXX1(models.Model):
     r1 = models.BigIntegerField()
     r111 = models.OneToOneField(
         "home.CustomText",
-        on_delete=models.CASCADE,
         null=True,
         blank=True,
+        on_delete=models.CASCADE,
         related_name="xxx1_r111",
     )
+
+
+class FDRF(models.Model):
+    "Generated Model"
+    r1 = models.BigIntegerField()
